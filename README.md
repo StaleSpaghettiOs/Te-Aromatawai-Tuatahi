@@ -10,7 +10,7 @@ Part 1 implementation
 * enc inputfile outputfile
 * dec ((Base64 encoded secret key)) ((Base64 encoded iv)) inputfile outputfile
 * e.g. 
-% java FileEncryptor enc plaintext.txt ciphertext.txt
-% Random key= w+4KkpW8hzDT/85DuQdpQw==
-% initVector= ds4/N743sjjOGH0W/I1aEw==
-% INFO: Encryption finished, saved at C:\Users\jakob\IdeaProjects\Crypto\src\ciphertext.enc
+* java FileEncryptor enc plaintext.txt ciphertext.txt
+* INFO: Random key= w+4KkpW8hzDT/85DuQdpQw==
+* INFO: initVector= ds4/N743sjjOGH0W/I1aEw==
+* INFO: Encryption finished, saved at C:\Users\jakob\IdeaProjects\Crypto\src\ciphertext.enc
