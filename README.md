@@ -90,7 +90,8 @@ INFO: Encryption finished, saved at C:\Users\jakob\IdeaProjects\Crypto\src\ciphe
 * 000010  66 6f 78 20 6a 75 6d 70 65 64 20 6f 76 65 72 20  fox jumped over
 * 000020  74 68 65 20 6c 61 7a 79 20 64 6f 67 2e           the lazy dog.
 
+**The design**
+
 The IV is used to ensure the same plaintext under the same key will always encrypt to different ciphertexts. In the above example, both encryptions of the same file yielded different hexdump results in the ciphertext.
 
-
-It doesn't pose any particular security threats to leave the iv unencrypted and unhidden, so the initialisation vector is stored in a separate file with the same name and .iv appended to it.
+It doesn't pose any particular security threats to leave the iv unencrypted and unhidden, so the initialisation vector is stored in a separate file with the same name and .iv appended to it. While this isn't the most secure way to store the IV, it's unlikely the same salt will ever be generated for the same key.
