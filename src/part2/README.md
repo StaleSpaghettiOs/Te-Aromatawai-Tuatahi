@@ -15,7 +15,9 @@
 
 
 **Part 2 implementation**
-<p>I extended my swtich statement from part 1 to check for an additional parameter on enc and dec operations. When enc has 3 arguments following it the program will interpret the first as the base64 encoded secret key, and when decrypt has 4 following it the program will assume there is an existing IV from the encryption operation with the same name as the encrypted file with ".iv" appended.</p>
+<p>I extended my swtich statement from part 1 to check for an additional parameter on enc and dec operations. When enc has 3 arguments following it the program will interpret the first as the base64 encoded secret key, and when decrypt has 4 following it the program will assume there is an existing IV from the encryption operation with the same name as the encrypted file with ".iv" appended.
+  <br><br>
+</p>
 
 **Encrypting:**
 
@@ -25,20 +27,23 @@
   
 <p>When given a secret key, the encryption process will use that key instead of generating a random one. This will allow us to confirm that the IV is salting the key, and a file with the same key will yield different results each time.</p>
 
-**Decrypting:**
+  *Encryption of the same file with the same key*
+  <img src="https://i.imgur.com/DXolCLH.png">
+  Screenshot direct link: https://i.imgur.com/DXolCLH.png<br/>
+  <p>The IV is used to ensure the same plaintext under the same key will always encrypt to different ciphertexts. In the above screenshot, both encryptions of the same file yielded different hexdump results in the ciphertext.
+  </p>
+
+  
+**Decrypting**
 
 * java part1.FileEncryptor dec ((Base64 encoded secret key)) ((Base64 encoded IV)) <INPUT> <OUTPUT>
 * OR
 * java part1.FileEncryptor dec ((Base64 encoded secret key)) <INPUT> <OUTPUT>
 
-*Encryption of the same file with the same key*
-<img src="https://i.imgur.com/DXolCLH.png">
-Screenshot direct link: https://i.imgur.com/DXolCLH.png
-The IV is used to ensure the same plaintext under the same key will always encrypt to different ciphertexts. In the above example, both encryptions of the same file yielded different hexdump results in the ciphertext.
-
 *Decryption of both encrypted files without specifying IV*
 <img src="https://i.imgur.com/uXCNgMO.png">
-Screenshot direct link: https://i.imgur.com/uXCNgMO.png
+Screenshot direct link: https://i.imgur.com/uXCNgMO.png<br/>
+  <p>In the above screenshot, both encryped files are decrypted without specifying the IV. Both decoded files are exactly the same as shown in hexdump, and each operation uses its own unique IV in combination with the given key, which in this example are stored in files named ciphertext.enc.iv and ciphertext2.enc.iv respectively.</p>
 
 
 **The design**
