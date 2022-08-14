@@ -18,18 +18,18 @@
 <p>I extended my swtich statement from part 1 to check for an additional parameter on enc and dec operations. When enc has 3 arguments following it the program will interpret the first as the base64 encoded secret key, and when decrypt has 4 following it the program will assume there is an existing IV from the encryption operation with the same name as the encrypted file with ".iv" appended.</p>
 
 **Encrypting:**
-*Syntax: 
-  * % java part2.FileEncryptor enc ((Base64 encoded secret key)) <INPUT> <OUTPUT>
+
+  * java part2.FileEncryptor enc ((Base64 encoded secret key)) <INPUT> <OUTPUT>
   * OR
-  * % java part2.FileEncryptor enc <INPUT> <OUTPUT>
+  * java part2.FileEncryptor enc <INPUT> <OUTPUT>
   
 <p>When given a secret key, the encryption process will use that key instead of generating a random one. This will allow us to confirm that the IV is salting the key, and a file with the same key will yield different results each time.</p>
 
 **Decrypting:**
-*Syntax
-* part1.FileEncryptor dec ((Base64 encoded secret key)) ((Base64 encoded IV)) inputfile outputfile
-* % java part1.FileEncryptor dec w+4KkpW8hzDT/85DuQdpQw== ds4/N743sjjOGH0W/I1aEw== ciphertext.enc decoded.txt
-* INFO: Decryption complete, open C:\Users\name\Crypto\src\decoded.txt
+
+* java part1.FileEncryptor dec ((Base64 encoded secret key)) ((Base64 encoded IV)) <INPUT> <OUTPUT>
+* OR
+* java part1.FileEncryptor dec ((Base64 encoded secret key)) <INPUT> <OUTPUT>
 
 *Encryption of the same file with the same key*
 <img src="https://i.imgur.com/DXolCLH.png">
