@@ -38,7 +38,7 @@ a file (can be a path with a file), whereas the output expects either a path or 
 Output files without a path go to document root 
 
 *SCREENSHOT DEMONSTRATION*
-<a href="https://imgur.com/1oGuC0N"/> </p>
+<img src="https://imgur.com/1oGuC0N"/> </p>
 
 
 <p align="center">
