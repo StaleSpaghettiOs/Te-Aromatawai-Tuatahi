@@ -32,11 +32,12 @@ Decrypting:
 
 *Encryption of the same file with the same key*
 <img src="https://i.imgur.com/DXolCLH.png">
-<a href="https://i.imgur.com/DXolCLH.png">Screenshot src</a>
+Screenshot direct link: https://i.imgur.com/DXolCLH.png
 Using hexdump, we can see that ciphertext.enc and ciphertext2.enc are distinct files even when encrypted with the same key, thanks to the initialisation vector.
 
 *Decryption of both encrypted files without specifying IV*
-
+<img src="https://i.imgur.com/uXCNgMO.png">
+Screenshot direct link: https://i.imgur.com/uXCNgMO.png
 *First file*
 % C:\Users\jakob\IdeaProjects\Crypto\src> hexdump -C plaintext1.txt
 * 000000  54 68 65 20 71 75 69 63 6b 20 62 72 6f 77 6e 20  The quick brown
