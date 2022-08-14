@@ -30,7 +30,12 @@ Decrypting:
 * % java part1.FileEncryptor dec w+4KkpW8hzDT/85DuQdpQw== ds4/N743sjjOGH0W/I1aEw== ciphertext.enc decoded.txt
 * INFO: Decryption complete, open C:\Users\name\Crypto\src\decoded.txt
 
-*Demonstrating successful encryption and decryption of a file using hexdump*
+*Encryption of the same file with the same key*
+<img src="https://i.imgur.com/DXolCLH.png">
+<a href="https://i.imgur.com/DXolCLH.png">Screenshot src</a>
+Using hexdump, we can see that ciphertext.enc and ciphertext2.enc are distinct files even when encrypted with the same key, thanks to the initialisation vector.
+
+*Decryption of both encrypted files without specifying IV*
 
 *First file*
 % C:\Users\jakob\IdeaProjects\Crypto\src> hexdump -C plaintext1.txt
