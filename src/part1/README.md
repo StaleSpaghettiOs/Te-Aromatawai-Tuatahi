@@ -14,7 +14,7 @@
 
 **Part 1 implementation**
 
-<p align="center">
+
 I decided to separate the encryption and decryption operations in to their own methods
 and check the input parameters in the main function, running the specified operation iff
 the correct number of parameters is given. Few duplicate lines added to decrypt() as 
@@ -23,9 +23,9 @@ they're separate instances now.
 The main function calls fillParams(String args[]) to handle the arguments of each operation
 and assign them to the global static variables; INPUT, OUTPUT, SKEY, and INITV. A switch 
 statement is used to determine which variables to assign based on operation and number of 
-arguments.</p>
+arguments.
 
-<p align="center"> 
+
 Encryption:
 The code inside encrypt() is virtually identical to the example code, but the hard-coded
 input and outputs needed to be changed to INPUT and OUTPUT on lines 66 & 67. The Util
@@ -38,10 +38,10 @@ a file (can be a path with a file), whereas the output expects either a path or 
 Output files without a path go to document root 
 
 *SCREENSHOT DEMONSTRATION*
-<img src="https://imgur.com/1oGuC0N"/> </p>
+<img src="https://imgur.com/1oGuC0N">
 
 
-<p align="center">
+
 Decryption:
 The first step for the decryption process is to decode the user inputted base64 IV & Key 
 into byte arrays. The code continues the same as SymmetrixExample, with the only significant
@@ -53,4 +53,4 @@ number of arguments and if the input (file) or output (path) doesn't exist.
 
 *SCREENSHOT DEMONSTRATION*
 
- <a href="https://imgur.com/kLT3zN1"/> </p>
+ <img src="https://imgur.com/kLT3zN1">
