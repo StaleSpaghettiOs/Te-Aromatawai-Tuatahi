@@ -38,7 +38,7 @@ a file (can be a path with a file), whereas the output expects either a path or 
 Output files without a path go to document root 
 
 *SCREENSHOT DEMONSTRATION*
-<img src="https://imgur.com/1oGuC0N">
+<img src="https://i.imgur.com/1oGuC0N.png">
 
 
 
@@ -53,4 +53,4 @@ number of arguments and if the input (file) or output (path) doesn't exist.
 
 *SCREENSHOT DEMONSTRATION*
 
- <img src="https://imgur.com/kLT3zN1">
+ <img src="https://imgur.com/kLT3zN1.png">
