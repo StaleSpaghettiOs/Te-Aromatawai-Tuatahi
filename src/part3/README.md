@@ -32,4 +32,4 @@ Using hexdump we can confirm that both ciphertexts are different files.</p>
 *Decrypting distinct ciphertexts with the same password*
 <img src="https://i.imgur.com/A6jJUDW.png">
 <a href="https://i.imgur.com/A6jJUDW.png">Direct link</a>
-p>Here I've continued to the decryption of ciphertext1.enc and ciphertext2.enc, and using hexdump we can confirm that both plaintext results are exactly identical.</p>
+<p>Here I've continued to the decryption of ciphertext1.enc and ciphertext2.enc, and using hexdump we can confirm that both plaintext results are exactly identical.</p>
