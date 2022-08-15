@@ -1,8 +1,6 @@
 # Te-Aromatawai-Tuatahi
 **CYBR372 Assignment 1 - Part 2**
 
-* This was compiled with OpenJDK 11, java runtime must recognise class file versions up to 55.0
-
 * JAVA Version:
   openjdk 11.0.16 2022-07-19
   OpenJDK Runtime Environment (build 11.0.16+8)
